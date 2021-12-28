@@ -20,7 +20,7 @@ export class weather extends Component {
 
     }
 
-   set = async () => {
+  set = async () => {
         let a = document.getElementById('inp').value;
         if (a === '') {
             this.setState({
@@ -28,13 +28,11 @@ export class weather extends Component {
                 error: window.alert("Please Enter  City...")
 
             })
-        };
-
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${a}&units=metric&appid=09897dfbb5e767857006e291a5eaeb8d`;
-        let data = await fetch(url);
-        let parsedData = await data.json()
-
-        else{
+        }
+        else {
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${a}&units=metric&appid=09897dfbb5e767857006e291a5eaeb8d`;
+            let data = await fetch(url);
+            let parsedData = await data.json()
             let ma = parsedData.weather[0].description
             let mn = ma.charAt(0).toUpperCase() + ma.slice(1)
             let ioc = 'https://openweathermap.org/img/w/' + parsedData.weather[0].icon + '.png '
@@ -53,9 +51,12 @@ export class weather extends Component {
             })
 
         }
-        
+
 
     }
+        
+
+    
 
     render() {
         return (
