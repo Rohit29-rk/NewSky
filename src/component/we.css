@@ -1,0 +1,170 @@
+
+.box{
+    width: 35%;
+    height: 100%;
+    border-left: 1px solid transparent;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    background: transparent;
+    position: fixed;
+    transform: translate3d(0,0,0);
+    min-width: 20rem;
+    min-height: 35rem;
+    backdrop-filter: blur(15px);
+    align-content: center;
+    
+}
+
+.box:after{
+    content: "";
+    display: block;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0,0,0);
+}
+
+.info{
+    position: absolute;
+    
+    width: 100%;
+    height: 35%;
+    z-index: 4;
+}
+.location{
+    margin-bottom: 0!important;
+    text-align: center;
+    
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.min{
+    margin-top: 1.5rem;
+}
+@keyframes rotates{
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
+#date{
+    text-align: center;
+    margin-bottom: 0!important;
+    color: #dadad6;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.temp{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 3rem;
+    
+}
+.roh{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:#dadad6;
+}
+.btro{
+    margin-top: 0;
+}
+.wet{
+    margin-top: 1rem;
+}
+#weathercon{
+    height:21%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+#weathercon .fas{
+    font-size: 4rem;
+    height: 120px;
+    margin-top: 1rem;
+    animation: fas-anime 3s linear infinite alternate;
+}
+@keyframes fas-anime{
+    from{
+        transform: scale(1.1);
+
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
+@media (max-width:600px){
+    .box{
+        width:100%;
+        height:100%;
+    }
+   
+    #weathercon{
+        font-size: 5rem;
+
+    }
+    .info{
+        font-size: 1.5rem;
+        color: black;
+    }
+    .temp{
+        margin-bottom: 0!important;
+    }
+    h5{
+        margin-bottom: 0!important;
+        color: black;
+    
+    }
+    .wet{
+        margin-top: 0.25rem;
+        margin-bottom: 0!important;
+    }
+    .min{
+        margin-top: 0!important;
+    }
+    h5{
+        margin-top: 0.3rem;
+    }
+    #weathercon .fas{
+        font-size: 4rem;
+        height: 120px;
+        margin-top: 0!important;
+        animation: fas-anime 3s linear infinite alternate;
+    }
+    .design{
+        display: none;
+    }
+    .cond{
+        color: black;
+    }
+    
+}
+@media (max-width:500px){
+    .box{
+        
+        height:100%;
+    }
+    
+   
+}
+@media (max-width:440px){
+    .btro{
+        margin-top: 1rem;
+        margin-left: 0!important;
+    }
+    
+   
+}
+body > span{
+    
+    text-align: center;
+    color: grey;
+}
