@@ -22,7 +22,7 @@ export class weather extends Component {
 
     set = async () => {
         let a = document.getElementById('inp').value;
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${a}&units=metric&appid=09897dfbb5e767857006e291a5eaeb8d`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${a}&lang=en&units=metric&appid=09897dfbb5e767857006e291a5eaeb8d`;
         let data = await fetch(url);
         let parsedData = await data.json()
         let ma = parsedData.weather[0].description
