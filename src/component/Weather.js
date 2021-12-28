@@ -34,7 +34,7 @@ export class weather extends Component {
         let data = await fetch(url);
         let parsedData = await data.json()
 
-        if (a === parsedData.name) {
+        else{
             let ma = parsedData.weather[0].description
             let mn = ma.charAt(0).toUpperCase() + ma.slice(1)
             let ioc = 'https://openweathermap.org/img/w/' + parsedData.weather[0].icon + '.png '
@@ -53,13 +53,7 @@ export class weather extends Component {
             })
 
         }
-        else {
-            this.setState({
-
-                error: window.alert("Please Enter Correct City...")
-
-            })
-        }
+        
 
     }
 
