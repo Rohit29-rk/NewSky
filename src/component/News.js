@@ -95,7 +95,7 @@ export class News extends Component {
             <div className="container">
 
 
-                <h1 className="text-center" style={{ marginTop: "10px" }}><b>{this.props.heading}</b></h1>
+                <h1 className="text-center" style={{ marginTop: "40px" }}><b>{this.props.heading}</b></h1>
                 {this.state.loading && <Spinner />}
                 <div className="row">
                     {!this.state.loading && this.state.results.map((element) => {
