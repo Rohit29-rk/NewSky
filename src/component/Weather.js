@@ -20,15 +20,24 @@ export class weather extends Component {
 
     }
 
-    set = async () => {
+   set = async () => {
         let a = document.getElementById('inp').value;
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${a}&lang=en&units=metric&appid=09897dfbb5e767857006e291a5eaeb8d`;
+        if (a === '') {
+            this.setState({
+
+                error: window.alert("Please Enter  City...")
+
+            })
+        };
+
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${a}&units=metric&appid=09897dfbb5e767857006e291a5eaeb8d`;
         let data = await fetch(url);
         let parsedData = await data.json()
-        let ma = parsedData.weather[0].description
-        let mn = ma.charAt(0).toUpperCase() + ma.slice(1)
-        let ioc = 'https://openweathermap.org/img/w/' + parsedData.weather[0].icon + '.png '
+
         if (a === parsedData.name) {
+            let ma = parsedData.weather[0].description
+            let mn = ma.charAt(0).toUpperCase() + ma.slice(1)
+            let ioc = 'https://openweathermap.org/img/w/' + parsedData.weather[0].icon + '.png '
             this.setState({
                 temp: parsedData.main.temp,
                 country: parsedData.sys.country,
@@ -42,16 +51,18 @@ export class weather extends Component {
                 error: ""
 
             })
-        } else {
 
+        }
+        else {
             this.setState({
 
                 error: window.alert("Please Enter Correct City...")
 
             })
-
         }
+
     }
+
     render() {
         return (
             <>
