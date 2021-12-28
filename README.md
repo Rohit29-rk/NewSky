@@ -2,7 +2,7 @@
 NewSky is news and Weather website that are made using react js which can be used to grab quick daily news bites and Weather Update at one place on your one click 
 
 # You can see Demo on
-(https://newsky.herokuapp.com/)
+https://newsky.herokuapp.com/
 
 # Getting Started with Create React App
 
