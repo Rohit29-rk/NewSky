@@ -38,10 +38,7 @@ export class Navbar extends Component {
                                 <Link className="nav-link" to="/weather">Weather</Link>
                             </li>
                         </ul>
-                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="text" placeholder="Search" style={{height:"unset"}}/>
-                            <button className="btn btn-success my-2 my-sm-0" type="button">Search</button>
-                        </form>
+                        
                     </div>
                 </nav>
             </div>
